@@ -8,7 +8,8 @@ import { Observable, of } from 'rxjs';
   providedIn: 'root'
 })
 export class GameService {
-  private apiUrl = "http://localhost:5000/games"
+  //private apiUrl = "http://localhost:5000/games"
+  private apiUrl = "https://ohorak-ang.azurewebsites.net/games";
 
   constructor(private http:HttpClient) { }
 
