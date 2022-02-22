@@ -1,0 +1,9 @@
+<div class="container">
+  <h1>{{ title }}</h1>
+
+  <div class="all-games">
+    <div class="games-carousel">
+      <app-game-card *ngFor="let game of games" [game]="game"></app-game-card>
+    </div>
+  </div>
+</div>

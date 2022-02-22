@@ -1,0 +1,12 @@
+<div class="game">
+  <div class="card-up">
+    <h3>{{ game.name }}</h3>
+    <div>
+      <span>{{ game.price }}{{ game.currency }}</span>
+    </div>
+  </div>
+  <div class="card-down">
+    <p>{{ game.description }}</p>
+    <app-button text="Add to Library" (btnClick)="addToLibrary()"></app-button>
+  </div>
+</div>

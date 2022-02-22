@@ -1,0 +1,81 @@
+{
+    "games":[
+        {
+        "id": 1,
+        "name": "Doom Ethernal",
+        "price": 200,
+        "currency": "UAH",
+        "description": "Hells armies have invaded Earth. Become the Slayer in an epic single-player campaign to conquer demons across dimensions and stop the final destruction of humanity. The only thing they fear... is you.",
+        "purchased": false,
+        "tag": "action"
+    },
+
+       {
+        "id": 2,
+        "name": "Doom Ethernal-2",
+        "price": 230,
+        "currency": "UAH",
+        "description": "Hells armies have invaded Earth. Become the Slayer in an epic single-player campaign to conquer demons across dimensions and stop the final destruction of humanity. The only thing they fear... is you.",
+        "purchased": true,
+        "tag": "adventure"
+    },
+     {
+        "id": 3,
+        "name": "Doom Ethernal-3",
+        "price": 250,
+        "currency": "UAH",
+        "description": "Hells armies have invaded Earth. Become the Slayer in an epic single-player campaign to conquer demons across dimensions and stop the final destruction of humanity. The only thing they fear... is you.",
+        "purchased": false,
+        "tag": "action"
+    },
+    {
+        "id": 4,
+        "name": "Doom Ethernal-4",
+        "price": 250,
+        "currency": "UAH",
+        "description": "Hells armies have invaded Earth. Become the Slayer in an epic single-player campaign to conquer demons across dimensions and stop the final destruction of humanity. The only thing they fear... is you.",
+        "purchased": false,
+        "tag": "action"
+    },
+    {
+        "id": 5,
+        "name": "Doom Ethernal-5",
+        "price": 260,
+        "currency": "UAH",
+        "description": "Hells armies have invaded Earth. Become the Slayer in an epic single-player campaign to conquer demons across dimensions and stop the final destruction of humanity. The only thing they fear... is you.",
+        "purchased": false,
+        "tag": "action"
+    },
+    {
+        "id": 6,
+        "name": "Doom Ethernal-6",
+        "price": 260,
+        "currency": "UAH",
+        "description": "Hells armies have invaded Earth. Become the Slayer in an epic single-player campaign to conquer demons across dimensions and stop the final destruction of humanity. The only thing they fear... is you.",
+        "purchased": false,
+        "tag": "action"
+    },
+    {
+        "id": 7,
+        "name": "Doom Ethernal-7",
+        "price": 270,
+        "currency": "UAH",
+        "description": "Hells armies have invaded Earth. Become the Slayer in an epic single-player campaign to conquer demons across dimensions and stop the final destruction of humanity. The only thing they fear... is you.",
+        "purchased": false,
+        "tag": "action"
+    }
+    ],
+    "friends":[
+        {
+        "id": 1,
+        "name": "Emma Jones"
+       
+    },
+
+      {
+        "id": 2,
+        "name": "John Smith"
+        
+    }
+    ]
+}

@@ -1,0 +1,12 @@
+.games-carousel {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 300px);
+  place-content: center;
+  gap: 1rem;
+}
+
+.all-games {
+  display: flex;
+  flex-direction: row;
+}

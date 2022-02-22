@@ -1,0 +1,12 @@
+<div class="search-area">
+  <label for="search"> {{ text }}</label
+  ><br />
+  <input
+    type="search"
+    id="search"
+    name="search"
+    placeholder="{{ placeholder }}"
+    (onsearch)="searchFor()"
+  />
+  <app-button text="Search"></app-button>
+</div>

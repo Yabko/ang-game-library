@@ -1,0 +1,36 @@
+<div class="container">
+  <h1>{{ title }}</h1>
+  <app-search-bar
+    text="Search games"
+    placeholder="Search games"
+  ></app-search-bar>
+
+  <h2>Featured Games</h2>
+  <div class="all-games">
+    <div class="games-carousel">
+      <app-game-card *ngFor="let game of games" [game]="game"></app-game-card>
+    </div>
+    <div class="games-filtering">
+      <div class="byPrice">
+        <label for="myRange">Filter by Price</label><br />
+        <input
+          type="range"
+          min="1"
+          max="200"
+          value="100"
+          class="slider"
+          id="myRange"
+        />
+      </div>
+      <div class="byTag">
+        <label for="tag">Filter by Tag</label><br />
+        <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike" />
+        <label for="tag"> Indie</label><br />
+        <input type="checkbox" id="vehicle2" name="vehicle2" value="Car" />
+        <label for="tag"> Action</label><br />
+        <input type="checkbox" id="vehicle2" name="vehicle2" value="Car" />
+        <label for="tag"> Adventure</label><br />
+      </div>
+    </div>
+  </div>
+</div>
