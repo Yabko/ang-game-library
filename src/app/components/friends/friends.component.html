@@ -3,11 +3,12 @@
   <app-search-bar
     text="Search friends"
     placeholder="Search friends"
+    (onsearch)="searchFriends($event)"
   ></app-search-bar>
 
   <div class="all-friends">
     <div class="friend-row"></div>
-    <app-friend-row *ngFor="let friend of friends" [friend]="friend">
+    <app-friend-row *ngFor="let friend of filteredFriends" [friend]="friend">
     </app-friend-row>
   </div>
 </div>

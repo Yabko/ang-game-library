@@ -8,6 +8,12 @@
   <div class="card-down">
     <p>{{ game.description }}</p>
     <p class="tag">{{ game.tag }}</p>
-    <app-button text="Add to Library"></app-button>
+    <div class="action-area">
+      <app-button *ngIf="!game.purchased" text="Add to Library"></app-button>
+      <ng-container *ngIf="game.purchased">
+        <app-button text="Share"></app-button>
+        <app-button text="Play"></app-button>
+      </ng-container>
+    </div>
   </div>
 </div>

@@ -31,7 +31,6 @@ export class GamesComponent implements OnInit {
   }
 
   searchGames(searchStr: string) {
-    console.log('search resp', searchStr);
     this.searchString = searchStr;
     this.filteredGames = this.searchByStr(this.games, searchStr);
     this.filteredGames = this.searchByTags(this.filteredGames);
