@@ -1,4 +1,8 @@
 #search {
-  width: 82%;
+  width: 85%;
   height: 40px;
+}
+
+.search-area {
+  margin: 0 10%;
 }

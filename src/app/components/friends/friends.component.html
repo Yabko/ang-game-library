@@ -6,6 +6,8 @@
   ></app-search-bar>
 
   <div class="all-friends">
-    <div *ngFor="let friend of friends">{{ friend.name }}</div>
+    <div class="friend-row"></div>
+    <app-friend-row *ngFor="let friend of friends" [friend]="friend">
+    </app-friend-row>
   </div>
 </div>

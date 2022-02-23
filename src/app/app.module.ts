@@ -14,6 +14,7 @@ import { ButtonComponent } from './components/button/button.component';
 import { LoginComponent } from './components/login/login.component';
 import { GameCardComponent } from './components/game-card/game-card.component';
 import { SearchBarComponent } from './components/search-bar/search-bar.component';
+import { FriendRowComponent } from './components/friend-row/friend-row.component';
 
 const appRoutes: Routes = [
   { path: '', component: LoginComponent },
@@ -37,6 +38,7 @@ const appRoutes: Routes = [
     LoginComponent,
     GameCardComponent,
     SearchBarComponent,
+    FriendRowComponent,
   ],
   imports: [
     BrowserModule,

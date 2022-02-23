@@ -10,9 +10,8 @@ import { GameService } from 'src/app/services/game.service';
 })
 export class LibraryComponent implements OnInit {
   title: string = "My Games";
-  library: Game[] = [];
-
   games: Game[] = [];
+  library: Game[] = [];
 
   constructor(private gameService: GameService) { }
 
