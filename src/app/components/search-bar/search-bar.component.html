@@ -1,12 +1,13 @@
 <div class="search-area">
-  <label for="search"> {{ text }}</label
+  <label for="search"> {{ searchLabel }}</label
   ><br />
   <input
     type="search"
     id="search"
     name="search"
+    [(ngModel)]="searchText"
     placeholder="{{ placeholder }}"
-    (onsearch)="searchFor()"
   />
-  <app-button text="Search"></app-button>
+
+  <app-button text="Search" (click)="searchFor()"></app-button>
 </div>

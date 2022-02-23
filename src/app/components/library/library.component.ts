@@ -16,7 +16,10 @@ export class LibraryComponent implements OnInit {
   constructor(private gameService: GameService) { }
 
   ngOnInit(): void {
-      this.gameService.getGames().subscribe((games) => this.games = games);
+    this.gameService.getGames().subscribe((games) => {
+      this.games = games;
+      this.library = games.filter((i) => i.purchased === true);
+    });
   }
 
 }

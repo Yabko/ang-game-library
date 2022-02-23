@@ -14,8 +14,8 @@ export class GameCardComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  addToLibrary() {
-    
+   addToLibrary(game: Game) {
+   
   }
 
 }

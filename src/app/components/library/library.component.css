@@ -1,4 +1,9 @@
+.container {
+  padding: 10px 30px;
+}
+
 .games-carousel {
+  padding-top: 20px;
   width: 100%;
   display: grid;
   grid-template-columns: repeat(auto-fill, 300px);

@@ -15,14 +15,17 @@ import { LoginComponent } from './components/login/login.component';
 import { GameCardComponent } from './components/game-card/game-card.component';
 import { SearchBarComponent } from './components/search-bar/search-bar.component';
 import { FriendRowComponent } from './components/friend-row/friend-row.component';
+import { FilterPipe } from './shared/filter.pipe';
+import { FormsModule } from '@angular/forms';
 
 const appRoutes: Routes = [
   { path: '', component: LoginComponent },
-  {path: 'login', component: LoginComponent },
+  { path: 'login', component: LoginComponent },
   { path: 'games', component: GamesComponent },
   { path: 'library', component: LibraryComponent },
   { path: 'friends', component: FriendsComponent },
   { path: 'profile', component: ProfileComponent },
+  { path: '**', component: LoginComponent },
 ]
 
 
@@ -39,9 +42,11 @@ const appRoutes: Routes = [
     GameCardComponent,
     SearchBarComponent,
     FriendRowComponent,
+    FilterPipe,
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     RouterModule.forRoot(appRoutes),
     FontAwesomeModule,
     HttpClientModule

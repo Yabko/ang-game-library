@@ -1,8 +1,13 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Game } from '../Game';
-import { GAMES } from '../mock-games';
 import { Observable, of } from 'rxjs';
+
+const httpOptions = {
+  headers: new HttpHeaders({
+    'Content-Type': 'application/json'
+  })
+}
 
 @Injectable({
   providedIn: 'root'
@@ -16,4 +21,10 @@ export class GameService {
   getGames(): Observable<Game[]> {
    return this.http.get<Game[]>(this.apiUrl)
   }
+
+  addGameToLibrary(game: Game): Observable<Game> {
+    const url = `${this.apiUrl}/${game.id}`;
+    return this.http.put<Game>(url, game, httpOptions);
+  }
+
 }

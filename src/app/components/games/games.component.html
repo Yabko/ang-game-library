@@ -1,14 +1,18 @@
 <div class="container">
   <h1>{{ title }}</h1>
   <app-search-bar
-    text="Search games"
+    searchLabel="Search games"
     placeholder="Search games"
+    (onsearch)="searchGames($event)"
   ></app-search-bar>
 
   <h2>Featured Games</h2>
   <div class="all-games">
     <div class="games-carousel">
-      <app-game-card *ngFor="let game of games" [game]="game"></app-game-card>
+      <app-game-card
+        *ngFor="let game of filteredGames"
+        [game]="game"
+      ></app-game-card>
     </div>
     <div class="games-filtering">
       <div class="byPrice">
