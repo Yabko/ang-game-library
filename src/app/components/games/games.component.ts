@@ -12,6 +12,9 @@ export class GamesComponent implements OnInit {
   searchString!: string;
   games: Game[] = [];
   filteredGames: Game[] = [];
+  indieChecked: boolean = false;
+  actionChecked: boolean = false;
+  adventureChecked: boolean = false;
 
   constructor(private gameService: GameService) { }
 
@@ -28,25 +31,40 @@ export class GamesComponent implements OnInit {
   }
 
   searchGames(searchStr: string) {
-
     console.log('search resp', searchStr);
-
     this.searchString = searchStr;
-    if (!this.games) {
-      this.filteredGames = this.games;
-    } else if (!searchStr) {
-       this.filteredGames = this.games;
-    } else {
-      const searchText = searchStr.toLocaleLowerCase();
-      const searchFields = ['name', 'description'];
-      this.filteredGames = this.games.filter(it =>
-      {
-        return (it.name.toLowerCase().includes(searchText) ||
-          it.description.toLocaleLowerCase().includes(searchText) ||
-         it.price.toString().includes(searchText));
-      })
-       
+    this.filteredGames = this.searchByStr(this.games, searchStr);
+    this.filteredGames = this.searchByTags(this.filteredGames);
+  }
+
+  searchByStr(games: Game[], searchStr: string) {
+    if (!games || !searchStr) {
+      return games;
     }
+
+    const searchText = searchStr.toLocaleLowerCase();
+    return games.filter(it => {
+      return (it.name.toLowerCase().includes(searchText) ||
+        it.description.toLocaleLowerCase().includes(searchText) ||
+        it.price.toString().includes(searchText));
+    })
+  }
+
+  searchByTags(games: Game[]) {
+    const set = new Set<string>();
+    if (this.indieChecked) {
+      set.add("indie")
+    }
+    if (this.actionChecked) {
+      set.add("action")
+    }
+    if (this.adventureChecked) {
+      set.add("adventure")
+    }
+    if (set.size === 0 || set.size === 3) {
+      return games;
+    }
+    return games.filter((it) => set.has(it.tag))
   }
 
 }
