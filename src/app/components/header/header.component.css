@@ -15,6 +15,11 @@ li {
   float: left;
 }
 
+.active {
+  border: 0.5px white solid;
+  border-radius: 10px;
+}
+
 li a {
   font-size: 1.5em;
   display: block;
@@ -29,8 +34,8 @@ li a:hover,
 .nav-bar > a:hover,
 li i:hover {
   cursor: pointer;
-  background-color: lightslategray;
-  border-radius: 40px;
+  background-color: #bdbcff;
+  border-radius: 10px;
 }
 
 .nav-bar > a {
@@ -42,8 +47,4 @@ li i:hover {
 
 .icon {
   font-size: 2em;
-}
-
-.active {
-  background-color: antiquewhite;
 }

@@ -1,3 +1,4 @@
+import { ThisReceiver } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 import { Game } from 'src/app/Game';
 import { GameService } from 'src/app/services/game.service';
@@ -12,9 +13,30 @@ export class GamesComponent implements OnInit {
   searchString!: string;
   games: Game[] = [];
   filteredGames: Game[] = [];
-  indieChecked: boolean = false;
-  actionChecked: boolean = false;
-  adventureChecked: boolean = false;
+
+  minPrice!: number;
+  maxPrice!: number;
+
+  private _indieChecked = false;
+  public get indieChecked() { return this._indieChecked; }
+  public set indieChecked(value: boolean) {
+    this._indieChecked = value;
+    this.searchGames(this.searchString);
+  }
+
+  private _actionChecked = false;
+  public get actionChecked() { return this._actionChecked; }
+  public set actionChecked(value: boolean) {
+    this._actionChecked = value;
+    this.searchGames(this.searchString);
+  }
+
+  private _adventureChecked = false;
+  public get adventureChecked() { return this._adventureChecked; }
+  public set adventureChecked(value: boolean) {
+    this._adventureChecked = value;
+    this.searchGames(this.searchString);
+  }
 
   constructor(private gameService: GameService) { }
 
